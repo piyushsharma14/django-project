@@ -1,0 +1,473 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    
+    <!-- Title -->
+    <title>FoodFamily | Home</title>
+
+    <!-- Favicon -->
+    
+    <link rel="icon" href="{% static 'img/core-img/favicon.ico' %}"  >
+
+    <!-- Core Stylesheet -->
+    
+<link rel='stylesheet' href="{% static 'style.css' %}">
+
+
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <i class="circle-preloader"></i>
+        <img src="{% static 'img/core-img/salad.png'%}"alt="">
+    </div>
+
+    <!-- Search Wrapper -->
+    <div class="search-wrapper">
+        <!-- Close Btn -->
+        <div class="close-btn"><i class="fa fa-times" aria-hidden="true"></i></div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <form action="#" method="post">
+                        <input type="search" name="search" placeholder="Type any keywords...">
+                        <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ##### Header Area Start ##### -->
+    <header class="header-area">
+
+        <!-- Top Header Area -->
+        <div class="top-header-area">
+            <div class="container h-100">
+                <div class="row h-100 align-items-center justify-content-between">
+                    <!-- Breaking News -->
+                    <div class="col-12 col-sm-4">
+                        <div class="breaking-news">
+                            <div id="breakingNewsTicker" class="ticker">
+                                <ul>
+                                    <li><a href="#">Welcome to Food Family</a></li>
+                                    <li><a href="#">Here,Many types of Food Recipes</a></li>
+                                    <li><a href="#">Share New Recipes with us</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Top Social Info -->
+                    <div class="col-12 col-sm-4">
+                        <div class="top-social-info text-right">
+                            <a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
+                            <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                            <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                            <a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a>
+                            <a href="#"><i class="fa fa-behance" aria-hidden="true"></i></a>
+                            <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>  
+
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-4 pull-right" style="text-align: right;">
+                        <ul style="display: inline;">
+                        {% if request.user.is_active %}
+                            <li><h6 style="margin-top: 3px">Welcome,&nbsp{{user.first_name}}</h6>&nbsp
+                            <a href="{% url 'logout' %}">Logout</a></li>
+                        {% else %}
+                         <li><a href="{% url 'signup' %}">Signup</a><span>&nbsp&nbsp|&nbsp&nbsp&nbsp</span><a href="{% url 'login' %}">Login</a></li>
+                         {% endif %}
+                         </ul>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+
+        <!-- Navbar Area -->
+        <div class="FoodFamily-main-menu">
+            <div class="classy-nav-container breakpoint-off">
+                <div class="container">
+                    <!-- Menu -->
+                    <nav class="classy-navbar justify-content-between" id="FoodFamilyNav">
+
+                        <!-- Logo -->
+                        <a class="nav-brand" href="{% url 'index'%}"><img src="{% static 'img/core-img/logo1.png'%}" alt=""></a>
+
+                        <!-- Navbar Toggler -->
+                        <div class="classy-navbar-toggler">
+                            <span class="navbarToggler"><span></span><span></span><span></span></span>
+                        </div>
+
+                        <!-- Menu -->
+                        <div class="classy-menu">
+
+                            <!-- close btn -->
+                            <div class="classycloseIcon">
+                                <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+                            </div>
+
+                            <!-- Nav Start -->
+                            <div class="classynav">
+                                <ul>
+                                            <li><a href="{% url 'index' %}">Home</a></li>
+                                            <li><a href="{% url 'aboutus' %}">About Us</a></li>
+                                            <li><a href="{% url 'recipepost' %}">Receipe Post</a></li>
+                                            <li><a href="{% url 'contact' %}">Contact</a></li>
+                                            <li><a href="{% url 'elements' %}">Elements</a></li>
+                                                    
+                                </ul>
+                            <!-- Nav End -->
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ##### Header Area End ##### -->
+
+    <!-- ##### Hero Area Start ##### -->
+    <section class="hero-area">
+        <div class="hero-slides owl-carousel">
+            <!-- Single Hero Slide -->
+            <div class="single-hero-slide bg-img" style="background-image: url({% static 'img/bg-img/bg12.jpg' %});">
+                <div class="container h-100">
+                    <div class="row h-100 align-items-center">
+                        <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+                            <div class="hero-slides-content" data-animation="fadeInUp" data-delay="100ms">
+                                <h2 data-animation="fadeInUp" data-delay="300ms">Food Family Pizza Pianta Recipe</h2>
+                                <p data-animation="fadeInUp" data-delay="700ms">A Delicios as well as healthy vegetarian pizza that you won't be able to resist. Topped with sauteed veggies like mushrooms, artichoke and spinach followed by tomato sauce and oodles of mozzarella cheese.</p>
+                                <button><a href="{% url 'pizza'%}" class="btn FoodFamily-btn" data-animation="fadeInUp" data-delay="1000ms">See Receipe</a></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Single Hero Slide -->
+            <div class="single-hero-slide bg-img" style="background-image: url({% static 'img/bg-img/bg11.jpg'%});">
+                <div class="container h-100">
+                    <div class="row h-100 align-items-center">
+                        <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+                            <div class="hero-slides-content" data-animation="fadeInUp" data-delay="100ms">
+                                <h2 data-animation="fadeInUp" data-delay="300ms">Food Family Vegetable Burger</h2>
+                                <p data-animation="fadeInUp" data-delay="700ms">Crisp and crunchy pattie made with potatoes and peas coated with bread crumbs and sliced between burger buns along with mustard and mayonnaise.</p>
+                                <button><a href="{% url 'burger'%}" class="btn FoodFamily-btn" data-animation="fadeInUp" data-delay="1000ms">See Receipe</a></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Single Hero Slide -->
+            <div class="single-hero-slide bg-img" style="background-image: url({% static 'img/bg-img/bg13.jpg'%});">
+                <div class="container h-100">
+                    <div class="row h-100 align-items-center">
+                        <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+                            <div class="hero-slides-content" data-animation="fadeInUp" data-delay="100ms">
+                                <h2 data-animation="fadeInUp" data-delay="300ms">Grilled Veg Pesto Sandwich Recipe</h2>
+                                <p data-animation="fadeInUp" data-delay="700ms">An easy and quick recipe. Grilled veg pesto sandwich can be prepared at home without any hassle. A healthy, filling and delicious delight that has all the ingredients to keep you going for long.</p>
+                                <button><a href="{% url 'sandwich'%}" class="btn FoodFamily-btn" data-animation="fadeInUp" data-delay="1000ms">See Receipe</a></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ##### Hero Area End ##### -->
+
+    <!-- ##### Top Catagory Area Start ##### -->
+    <section class="top-catagory-area section-padding-80-0">
+        <div class="container">
+            <div class="row">
+                <!-- Top Catagory Area -->
+                <div class="col-12 col-lg-6">
+                    <div class="single-top-catagory">
+                        <img src="{% static 'img/bg-img/bg15.jpg'%}" alt="">
+                        <!-- Content -->
+                        <div class="top-cta-content">
+                            <h3>Gajar Halwa</h3>
+                            <h6>Simple &amp; Delicios</h6>
+                            <a href="{% url 'gajarhalwa'%}" class="btn FoodFamily-btn">See Full Receipe</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Top Catagory Area -->
+                <div class="col-12 col-lg-6">
+                    <div class="single-top-catagory">
+                        <img src="{% static 'img/bg-img/bg16.jpg'%}" alt="">
+                        <!-- Content -->
+                        <div class="top-cta-content">
+                            <h3>Kesari Gujiya</h3>
+                            <h6>Simple &amp; Delicios</h6>
+                            <a href="{% url 'gunjiya'%}" class="btn FoodFamily-btn">See Full Receipe</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ##### Top Catagory Area End ##### -->
+
+    <!-- ##### Best Receipe Area Start ##### -->
+    <section class="best-receipe-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="section-heading">
+                        <h3>The best Receipies</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <!-- Single Best Receipe Area -->
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <div class="single-best-receipe-area mb-30">
+                        <img style="height: 300px;"src="{% static 'img/bg-img/bg18.jpg'%}" alt="">
+                        <div class="receipe-content">
+                            <a href="{% url 'gulabjamun'%}">
+                                <h5>Homemade Gulab Jamun Recipe</h5>
+                            </a>
+                            <div class="ratings">
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star-o" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Single Best Receipe Area -->
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <div class="single-best-receipe-area mb-30">
+                        <img style="height: 300px;" src="{% static 'img/bg-img/bg11.jpg'%}" alt="">
+                        <div class="receipe-content">
+                            <a href="{% url 'burger'%}">
+                                <h5>Homemade Burger</h5>
+                            </a>
+                            <div class="ratings">
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star-o" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Single Best Receipe Area -->
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <div class="single-best-receipe-area mb-30">
+                        <img style="height: 300px;" src="{% static 'img/bg-img/bg19.jpg'%}" alt="">
+                        <div class="receipe-content">
+                            <a href="{% url 'sandwich'%}">
+                                <h5>Sandwitch</h5>
+                            </a>
+                            <div class="ratings">
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star-o" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Single Best Receipe Area -->
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <div class="single-best-receipe-area mb-30">
+                        <img style="height: 300px;" src="{% static 'img/bg-img/bg10.jpg'%}" alt="">
+                        <div class="receipe-content">
+                            <a href="{% url 'noodels'%}">
+                                <h5>Veg Hakka Noodles</h5>
+                            </a>
+                            <div class="ratings">
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star-o" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Single Best Receipe Area -->
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <div class="single-best-receipe-area mb-30">
+                        <img style="height: 300px;" src="{% static 'img/bg-img/bg20.jpg'%}" alt="">
+                        <div class="receipe-content">
+                            <a href="{% url 'chilli'%}">
+                                <h5>Honey Chilli Potato Recipe</h5>
+                            </a>
+                            <div class="ratings">
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star-o" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Single Best Receipe Area -->
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <div class="single-best-receipe-area mb-30">
+                        <img style="height: 300px;" src="{% static 'img/bg-img/bg22.jpg'%}" alt="">
+                        <div class="receipe-content">
+                            <a href="{% url 'dum'%}">
+                                <h5>Dum Biryani Risotto Recipe</h5>
+                            </a>
+                            <div class="ratings">
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star-o" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ##### Best Receipe Area End ##### -->
+
+  
+    <!-- ##### Follow Us Instagram Area Start ##### -->
+    <div class="follow-us-instagram">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h5>Follow Us Instragram</h5>
+                </div>
+            </div>
+        </div>
+        <!-- Instagram Feeds -->
+        <div class="insta-feeds d-flex flex-wrap">
+            <!-- Single Insta Feeds -->
+            <div class="single-insta-feeds">
+                <img src="{% static 'img/bg-img/insta1.jpg'%}" alt="">
+                <!-- Icon -->
+                <div class="insta-icon">
+                    <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                </div>
+            </div>
+
+            <!-- Single Insta Feeds -->
+            <div class="single-insta-feeds">
+                <img src="{% static 'img/bg-img/insta2.jpg'%}" alt="">
+                <!-- Icon -->
+                <div class="insta-icon">
+                    <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                </div>
+            </div>
+
+            <!-- Single Insta Feeds -->
+            <div class="single-insta-feeds">
+                <img src="{% static 'img/bg-img/insta3.jpg'%}" alt="">
+                <!-- Icon -->
+                <div class="insta-icon">
+                    <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                </div>
+            </div>
+
+            <!-- Single Insta Feeds -->
+            <div class="single-insta-feeds">
+                <img src="{% static 'img/bg-img/insta4.jpg'%}" alt="">
+                <!-- Icon -->
+                <div class="insta-icon">
+                    <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                </div>
+            </div>
+
+            <!-- Single Insta Feeds -->
+            <div class="single-insta-feeds">
+                <img src="{% static 'img/bg-img/insta5.jpg'%}" alt="">
+                <!-- Icon -->
+                <div class="insta-icon">
+                    <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                </div>
+            </div>
+
+            <!-- Single Insta Feeds -->
+            <div class="single-insta-feeds">
+                <img src="{% static 'img/bg-img/insta6.jpg'%}" alt="">
+                <!-- Icon -->
+                <div class="insta-icon">
+                    <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                </div>
+            </div>
+
+            <!-- Single Insta Feeds -->
+            <div class="single-insta-feeds">
+                <img src="{% static 'img/bg-img/insta7.jpg'%}" alt="">
+                <!-- Icon -->
+                <div class="insta-icon">
+                    <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ##### Follow Us Instagram Area End ##### -->
+
+    <!-- ##### Footer Area Start ##### -->
+    <footer class="footer-area">
+        <div class="container h-100">
+            <div class="row h-100">
+                <div class="col-12 h-100 d-flex flex-wrap align-items-center justify-content-between">
+                    <!-- Footer Social Info -->
+                    <div class="footer-social-info text-right">
+                        <a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
+                        <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                        <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                        <a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a>
+                        <a href="#"><i class="fa fa-behance" aria-hidden="true"></i></a>
+                        <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                    </div>
+                    <!-- Footer logo1 -->
+                    <div class="footer-logo1">
+                        <a href="{% url 'index'%}"><img src="{% static 'img/core-img/logo1.png' %}" alt=""></a>
+                    </div>
+                    <p>This Template Made By Piyush</p>
+            </div>
+        </div>
+    </footer>
+    <!-- ##### Footer Area Start ##### -->
+
+    <!-- ##### All Javascript Files ##### -->
+    <!-- jQuery-2.2.4 js -->
+    
+    <script src="{% static 'js/jquery/jquery-2.2.4.min.js' %}"></script>
+    <!-- Popper js -->
+    
+    <script src="{% static 'js/bootstrap/popper.min.js' %}"></script>
+    <!-- Bootstrap js -->
+    
+    <script src="{% static 'js/bootstrap/bootstrap.min.js' %}"></script>
+    <!-- All Plugins js -->
+    
+    <script src="{% static 'js/plugins/plugins.js' %}"></script>
+    <!-- Active js -->
+    
+    <script src="{% static 'js/active.js' %}"></script>
+</body>
+
+</html>

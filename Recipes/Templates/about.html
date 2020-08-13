@@ -1,0 +1,274 @@
+teat
+{% extends 'base.html' %}
+
+{%  block page %}
+{% load staticfiles %}
+  <!-- ##### Breadcumb Area Start ##### -->
+    <div class="breadcumb-area bg-img bg-overlay" style="background-image: url({% static 'img/bg-img/bg26.jpg'%});">
+        <div class="container h-100">
+            <div class="row h-100 align-items-center">
+                <div class="col-12">
+                    <div class="breadcumb-text text-center">
+                        <h1 style="color: white;">About us</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ##### Breadcumb Area End ##### -->
+
+    <!-- ##### About Area Start ##### -->
+    <section class="about-area section-padding-80">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="section-heading">
+                        <h3>Who we are and what we do?</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <center><h4>FoodFamily gives a platform everyone to know better to better knowlwdge about new food recipes.</h4></center>
+
+                    <h6 class="text-center">Foods are consumable items that when eaten restore hunger and saturation points and sometimes cause status effects. They are essential to survival, as going without them will eventually starve the player, causing severe damage (in Easy and Normal modes) or even death (in Hard and Hardcore modes).
+                    <br>A recipe is a set of instructions that describes how to prepare or make something, especially a dish of prepared food.<br>The term recipe is also used in medicine or in information technology (e.g., user acceptance). A doctor will usually begin a prescription with recipe, Latin for take, usually abbreviated as Rx or the equivalent symbol (℞)</h6>
+                </div>
+            </div>
+
+            <div class="row align-items-center mt-70">
+                <!-- Single Cool Fact -->
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="single-cool-fact">
+                        <img src="{% static 'img/core-img/salad.png'%}" alt="">
+                        <h3><span class="counter">1287</span></h3>
+                        <h6>Amazing receipies</h6>
+                    </div>
+                </div>
+
+                <!-- Single Cool Fact -->
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="single-cool-fact">
+                        <img src="{% static 'img/core-img/hamburger.png'%}" alt="">
+                        <h3><span class="counter">25</span></h3>
+                        <h6>Burger receipies</h6>
+                    </div>
+                </div>
+
+                <!-- Single Cool Fact -->
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="single-cool-fact">
+                        <img src="{% static 'img/core-img/rib.png'%}" alt="">
+                        <h3><span class="counter">471</span></h3>
+                        <h6>Meat receipies</h6>
+                    </div>
+                </div>
+
+                <!-- Single Cool Fact -->
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="single-cool-fact">
+                        <img src="{% static 'img/core-img/pancake.png'%}" alt="">
+                        <h3><span class="counter">326</span></h3>
+                        <h6>Desert receipies</h6>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <img class="mb-70" src="{% static 'img/bg-img/bg29.jpeg'%}" alt="">
+                    <p class="text-center">FoodFamily gives a platform everyone to know better to better knowlwdge about new food recipes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ##### About Area End ##### -->
+
+    <!-- ##### Contact Area Start ##### -->
+    <div class="contact-area section-padding-0-80">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="section-heading">
+                        <h3>FEEDBACK</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="container" style="background-color: white;margin-top: -29px;padding-top: 33px;padding-bottom: 27px;">
+        <div>
+        <form>   
+       <div class="row">
+           <div class="col-sm-6">
+                
+                 <div class="form-group">
+                      <label for="text">First Name:</label>
+                      <input type="text" class="form-control" id="name" required="">
+                 </div>
+           </div>
+
+           <div class="col-sm-6">
+                
+                 <div class="form-group">
+                      <label for="text">Last Name:</label>
+                      <input type="text" class="form-control" id="lname" required="">
+                 </div>
+           </div>
+       </div>
+
+       <div class="row">
+         <div class="col-sm-12">
+                      <label for="address">Address:</label>
+                      <input type="text" class="form-control" id="address" required="">
+         </div>
+           
+       </div><br>
+
+       <div class="row">
+         <div class="col-sm-6" >
+                      <label for="DOB">Date Of Birth:</label>
+                      <input type="Date" class="form-control" id="Date" required="">
+         </div>
+         <div class="col-sm-6">
+                      <label for="no.">Phone No.:</label>
+                      <input type="number" class="form-control" id="number" required="">
+         </div>
+        
+           
+       </div><br>
+
+         <div class="row">
+         <div class="col-sm-12">
+                      <label for="Email">Email:</label>
+                      <input type="Email" class="form-control" id="Email" required="">
+         </div>
+           
+       </div><br>
+       <center><button style="width: 500px;" class="btn FoodFamily-btn">Submit</button></center>
+        
+         </form> 
+        </div>
+    </div>
+    <!-- ##### Contact Area End ##### -->
+
+ <!-- ##### Follow Us Instagram Area Start ##### -->
+    <div class="follow-us-instagram">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h5>Follow Us Instragram</h5>
+                </div>
+            </div>
+        </div>
+        <!-- Instagram Feeds -->
+        <div class="insta-feeds d-flex flex-wrap">
+            <!-- Single Insta Feeds -->
+            <div class="single-insta-feeds">
+                <img src="{% static 'img/bg-img/insta1.jpg'%}" alt="">
+                <!-- Icon -->
+                <div class="insta-icon">
+                    <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                </div>
+            </div>
+
+            <!-- Single Insta Feeds -->
+            <div class="single-insta-feeds">
+                <img src="{% static 'img/bg-img/insta2.jpg'%}" alt="">
+                <!-- Icon -->
+                <div class="insta-icon">
+                    <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                </div>
+            </div>
+
+            <!-- Single Insta Feeds -->
+            <div class="single-insta-feeds">
+                <img src="{% static 'img/bg-img/insta3.jpg'%}" alt="">
+                <!-- Icon -->
+                <div class="insta-icon">
+                    <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                </div>
+            </div>
+
+            <!-- Single Insta Feeds -->
+            <div class="single-insta-feeds">
+                <img src="{% static 'img/bg-img/insta4.jpg'%}" alt="">
+                <!-- Icon -->
+                <div class="insta-icon">
+                    <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                </div>
+            </div>
+
+            <!-- Single Insta Feeds -->
+            <div class="single-insta-feeds">
+                <img src="{% static 'img/bg-img/insta5.jpg'%}" alt="">
+                <!-- Icon -->
+                <div class="insta-icon">
+                    <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                </div>
+            </div>
+
+            <!-- Single Insta Feeds -->
+            <div class="single-insta-feeds">
+                <img src="{% static 'img/bg-img/insta6.jpg'%}" alt="">
+                <!-- Icon -->
+                <div class="insta-icon">
+                    <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                </div>
+            </div>
+
+            <!-- Single Insta Feeds -->
+            <div class="single-insta-feeds">
+                <img src="{% static 'img/bg-img/insta7.jpg'%}" alt="">
+                <!-- Icon -->
+                <div class="insta-icon">
+                    <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ##### Follow Us Instagram Area End ##### -->
+
+    <!-- ##### Footer Area Start ##### -->
+    <footer class="footer-area">
+        <div class="container h-100">
+            <div class="row h-100">
+                <div class="col-12 h-100 d-flex flex-wrap align-items-center justify-content-between">
+                    <!-- Footer Social Info -->
+                    <div class="footer-social-info text-right">
+                        <a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
+                        <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                        <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                        <a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a>
+                        <a href="#"><i class="fa fa-behance" aria-hidden="true"></i></a>
+                        <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                    </div>
+                    <!-- Footer logo1 -->
+                    <div class="footer-logo1">
+                        <a href="{% url 'index' %}"><img src="{% static 'img/core-img/logo1.png' %}" alt=""></a>
+                    </div>
+                    <p>This Template Made By Piyush</p>
+            </div>
+        </div>
+    </footer>
+    <!-- ##### Footer Area Start ##### -->
+     <!-- jQuery-2.2.4 js -->
+    {% load staticfiles %}
+    <script src="{% static 'js/jquery/jquery-2.2.4.min.js' %}"></script>
+    <!-- Popper js -->
+    {% load staticfiles %}
+    <script src="{% static 'js/bootstrap/popper.min.js' %}"></script>
+    <!-- Bootstrap js -->
+    {% load staticfiles %}
+    <script src="{% static 'js/bootstrap/bootstrap.min.js' %}"></script>
+    <!-- All Plugins js -->
+    {% load staticfiles %}
+    <script src="{% static 'js/plugins/plugins.js' %}"></script>
+    <!-- Active js -->
+    {% load staticfiles %}
+    <script src="{% static 'js/active.js' %}"></script>
+
+ {% endblock page %}
+
